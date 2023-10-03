@@ -1,0 +1,16 @@
+{
+  "name": "electronjs",
+  "version": "1.0.0",
+  "description": "Desktop Application",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "watch": "nodemon --exec electron ."
+  },
+  "author": "Niladri Adhikary",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^26.2.4"
+  }
+}
