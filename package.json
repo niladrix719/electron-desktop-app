@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "watch": "nodemon --exec electron ."
+    "watch": "nodemon --exec electron .",
+    "build": "electron-builder"
   },
   "author": "Niladri Adhikary",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^26.2.4"
+    "electron": "^26.2.4",
+    "electron-builder": "^24.6.4"
   }
 }
