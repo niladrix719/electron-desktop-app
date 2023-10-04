@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electron App</title>
+    <title>Electron App</title>   
 </head>
 <body>
     <h1>This is my Electron App</h1>
     <p>We all love coding !!</p>
     <a href="child.html">Go to Child</a>
 
+    <button onclick="func()">Click</button>
+
     <script src="renderer.js"></script>
+    <script>
+        const { ipcRenderer } = require('electron')
+        function func(){
+            ipcRenderer.send('msg',"hello from renderer")
+            ipcRenderer.on('reply',(e,data) => {
+                console.log(data);
+            })
+        }
+    </script> 
 </body>
 </html>
